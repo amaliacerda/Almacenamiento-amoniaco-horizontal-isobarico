@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "horizontal"
+version = "0.1.0"
+description = "Modelo 1D de evaporación isobárica en estanques cilíndricos horizontales (adapta CryoEvap, GPL-3.0)"
+license = {text = "GPL-3.0-or-later"}
+requires-python = ">=3.9"
+dependencies = ["numpy", "scipy", "CoolProp", "openpyxl", "cryoevap"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
